@@ -159,6 +159,24 @@
             <p class="pull-right"><a href="https://github.com/ardeshir/">powered by open source</a></p>
         </div>
     </footer>
+    <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+    <script src="https://google.github.io/traceur-compiler/bin/BrowserSystem.js"></script>
+    <script src="https://google.github.io/traceur-compiler/src/bootstrap.js"></script>
+    <script type="module">
+      class Greeter {
+        constructor(message) {
+          this.message = message;
+        }
+
+        greet() {
+          var element = document.querySelector('#message');
+          element.innerHTML = this.message;
+        }
+      };
+
+      var greeter = new Greeter('Hello, world!');
+      greeter.greet();
+    </script>
 <script src="http://dev.univrs.io/jquery.js"></script>
 <script src="http://dev.univrs.io/bootstrap.js"></script>
 </body>
